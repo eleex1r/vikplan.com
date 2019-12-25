@@ -22,3 +22,5 @@ yarn-error.log*
 
 .firebase
 src/assets/vik/unused
+firebase.json
+.firebaserc
