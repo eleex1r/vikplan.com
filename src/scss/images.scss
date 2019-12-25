@@ -1,0 +1,400 @@
+.img {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.img.w20 {
+    width: 20px;
+    height: 20px;
+}
+.img.w30 {
+    width: 30px;
+    height: 30px;
+}
+.img.w60 {
+    width: 60px;
+    height: 60px;
+}
+
+// logo & icons
+.img.img-logo-60 {
+    background-image: url(./assets/logo_60.png);
+}
+.img.img-logo {
+    background-image: url(./assets/logo2.png);
+}
+.img.icons8-footman {
+    background-image: url(./assets/icons/icons8-footman-30.png);
+}
+
+// research
+.img.research-economy {
+    background-image: url(./assets/vik/research/economy.png);
+}
+.img.research-warfare {
+    background-image: url(./assets/vik/research/warfare.png);
+}
+.img.research-spy {
+    background-image: url(./assets/vik/research/spy.png);
+}
+.img.research-training {
+    background-image: url(./assets/vik/research/training.png);
+}
+.img.research-invaders {
+    background-image: url(./assets/vik/research/invaders.png);
+}
+.img.research-hero {
+    background-image: url(./assets/vik/research/hero.png);
+}
+.img.research-tier5 {
+    background-image: url(./assets/vik/research/tier5.png);
+}
+.img.research-tier6 {
+    background-image: url(./assets/vik/research/tier6.png);
+}
+.img.research-tier7 {
+    background-image: url(./assets/vik/research/tier7.png);
+}
+.img.research-shaman {
+    background-image: url(./assets/vik/research/shaman.png);
+}
+
+// common
+.img.img-food {
+    background-image: url(./assets/vik/food.png);
+}
+.img.img-lumber {
+    background-image: url(./assets/vik/wood.png);
+}
+.img.img-iron {
+    background-image: url(./assets/vik/iron.png);
+}
+.img.img-stone {
+    background-image: url(./assets/vik/stone.png);
+}
+.img.img-silver {
+    background-image: url(./assets/vik/silver.png);
+}
+.img.img-gold {
+    background-image: url(./assets/vik/gold.png);
+}
+.img.img-power {
+    background-image: url(./assets/vik/power.png);
+}
+.img.img-research {
+    background-image: url(./assets/vik/research.png);
+}
+.img.img-bronze {
+    background-image: url(./assets/vik/bronze.png);
+}
+.img.img-speed {
+    background-image: url(./assets/vik/speed.png);
+}
+.img.img-scroll {
+    background-image: url(./assets/vik/scroll.png);
+}
+.img.img-totem {
+    background-image: url(./assets/vik/totem.png);
+}
+.img.img-bronze2 {
+    background-image: url(./assets/vik/bronze2.png);
+}
+.img.img-obsidian {
+    background-image: url(./assets/vik/obsidian.png);
+}
+
+// ordinary materials
+.img.m011 {
+    background-image: url(./assets/vik/materials/m011.jpg);
+}
+.img.m012 {
+    background-image: url(./assets/vik/materials/m012.jpg);
+}
+.img.m013 {
+    background-image: url(./assets/vik/materials/m013.jpg);
+}
+.img.m021 {
+    background-image: url(./assets/vik/materials/m021.jpg);
+}
+.img.m022 {
+    background-image: url(./assets/vik/materials/m022.jpg);
+}
+.img.m023 {
+    background-image: url(./assets/vik/materials/m023.jpg);
+}
+.img.m031 {
+    background-image: url(./assets/vik/materials/m031.jpg);
+}
+.img.m032 {
+    background-image: url(./assets/vik/materials/m032.jpg);
+}
+.img.m033 {
+    background-image: url(./assets/vik/materials/m033.jpg);
+}
+.img.m041 {
+    background-image: url(./assets/vik/materials/m041.jpg);
+}
+.img.m042 {
+    background-image: url(./assets/vik/materials/m042.jpg);
+}
+.img.m043 {
+    background-image: url(./assets/vik/materials/m043.jpg);
+}
+
+// invaders materials
+.img.m111 {
+    background-image: url(./assets/vik/materials/m111.jpg);
+}
+.img.m112 {
+    background-image: url(./assets/vik/materials/m112.jpg);
+}
+.img.m113 {
+    background-image: url(./assets/vik/materials/m113.jpg);
+}
+.img.m114 {
+    background-image: url(./assets/vik/materials/m114.jpg);
+}
+.img.m115 {
+    background-image: url(./assets/vik/materials/m115.jpg);
+}
+
+.img.m121 {
+    background-image: url(./assets/vik/materials/m121.jpg);
+}
+.img.m122 {
+    background-image: url(./assets/vik/materials/m122.jpg);
+}
+.img.m123 {
+    background-image: url(./assets/vik/materials/m123.jpg);
+}
+.img.m124 {
+    background-image: url(./assets/vik/materials/m124.jpg);
+}
+.img.m125 {
+    background-image: url(./assets/vik/materials/m125.jpg);
+}
+
+.img.m131 {
+    background-image: url(./assets/vik/materials/m131.jpg);
+}
+.img.m132 {
+    background-image: url(./assets/vik/materials/m132.jpg);
+}
+.img.m133 {
+    background-image: url(./assets/vik/materials/m133.jpg);
+}
+.img.m134 {
+    background-image: url(./assets/vik/materials/m134.jpg);
+}
+.img.m135 {
+    background-image: url(./assets/vik/materials/m135.jpg);
+}
+
+.img.m141 {
+    background-image: url(./assets/vik/materials/m141.jpg);
+}
+.img.m142 {
+    background-image: url(./assets/vik/materials/m142.jpg);
+}
+.img.m143 {
+    background-image: url(./assets/vik/materials/m143.jpg);
+}
+.img.m144 {
+    background-image: url(./assets/vik/materials/m144.jpg);
+}
+.img.m145 {
+    background-image: url(./assets/vik/materials/m145.jpg);
+}
+
+.img.m211 {
+    background-image: url(./assets/vik/materials/m211.jpg);
+}
+.img.m212 {
+    background-image: url(./assets/vik/materials/m212.jpg);
+}
+.img.m213 {
+    background-image: url(./assets/vik/materials/m213.jpg);
+}
+.img.m214 {
+    background-image: url(./assets/vik/materials/m214.jpg);
+}
+.img.m215 {
+    background-image: url(./assets/vik/materials/m215.jpg);
+}
+
+.img.m221 {
+    background-image: url(./assets/vik/materials/m221.jpg);
+}
+.img.m222 {
+    background-image: url(./assets/vik/materials/m222.jpg);
+}
+.img.m223 {
+    background-image: url(./assets/vik/materials/m223.jpg);
+}
+.img.m224 {
+    background-image: url(./assets/vik/materials/m224.jpg);
+}
+.img.m225 {
+    background-image: url(./assets/vik/materials/m225.jpg);
+}
+
+.img.m231 {
+    background-image: url(./assets/vik/materials/m231.jpg);
+}
+.img.m232 {
+    background-image: url(./assets/vik/materials/m232.jpg);
+}
+.img.m233 {
+    background-image: url(./assets/vik/materials/m233.jpg);
+}
+.img.m234 {
+    background-image: url(./assets/vik/materials/m234.jpg);
+}
+.img.m235 {
+    background-image: url(./assets/vik/materials/m235.jpg);
+}
+
+.img.m241 {
+    background-image: url(./assets/vik/materials/m241.jpg);
+}
+.img.m242 {
+    background-image: url(./assets/vik/materials/m242.jpg);
+}
+.img.m243 {
+    background-image: url(./assets/vik/materials/m243.jpg);
+}
+.img.m244 {
+    background-image: url(./assets/vik/materials/m244.jpg);
+}
+.img.m245 {
+    background-image: url(./assets/vik/materials/m245.jpg);
+}
+
+.img.m311 {
+    background-image: url(./assets/vik/materials/m311.jpg);
+}
+.img.m312 {
+    background-image: url(./assets/vik/materials/m312.jpg);
+}
+.img.m313 {
+    background-image: url(./assets/vik/materials/m313.jpg);
+}
+.img.m314 {
+    background-image: url(./assets/vik/materials/m314.jpg);
+}
+.img.m315 {
+    background-image: url(./assets/vik/materials/m315.jpg);
+}
+
+.img.m321 {
+    background-image: url(./assets/vik/materials/m321.jpg);
+}
+.img.m322 {
+    background-image: url(./assets/vik/materials/m322.jpg);
+}
+.img.m323 {
+    background-image: url(./assets/vik/materials/m323.jpg);
+}
+.img.m324 {
+    background-image: url(./assets/vik/materials/m324.jpg);
+}
+.img.m325 {
+    background-image: url(./assets/vik/materials/m325.jpg);
+}
+
+.img.m331 {
+    background-image: url(./assets/vik/materials/m331.jpg);
+}
+.img.m332 {
+    background-image: url(./assets/vik/materials/m332.jpg);
+}
+.img.m333 {
+    background-image: url(./assets/vik/materials/m333.jpg);
+}
+.img.m334 {
+    background-image: url(./assets/vik/materials/m334.jpg);
+}
+.img.m335 {
+    background-image: url(./assets/vik/materials/m335.jpg);
+}
+
+.img.m341 {
+    background-image: url(./assets/vik/materials/m341.jpg);
+}
+.img.m342 {
+    background-image: url(./assets/vik/materials/m342.jpg);
+}
+.img.m343 {
+    background-image: url(./assets/vik/materials/m343.jpg);
+}
+.img.m344 {
+    background-image: url(./assets/vik/materials/m344.jpg);
+}
+.img.m345 {
+    background-image: url(./assets/vik/materials/m345.jpg);
+}
+
+.img.m411 {
+    background-image: url(./assets/vik/materials/m411.jpg);
+}
+.img.m412 {
+    background-image: url(./assets/vik/materials/m412.jpg);
+}
+.img.m413 {
+    background-image: url(./assets/vik/materials/m413.jpg);
+}
+.img.m414 {
+    background-image: url(./assets/vik/materials/m414.jpg);
+}
+.img.m415 {
+    background-image: url(./assets/vik/materials/m415.jpg);
+}
+
+.img.m421 {
+    background-image: url(./assets/vik/materials/m421.jpg);
+}
+.img.m422 {
+    background-image: url(./assets/vik/materials/m422.jpg);
+}
+.img.m423 {
+    background-image: url(./assets/vik/materials/m423.jpg);
+}
+.img.m424 {
+    background-image: url(./assets/vik/materials/m424.jpg);
+}
+.img.m425 {
+    background-image: url(./assets/vik/materials/m425.jpg);
+}
+
+.img.m431 {
+    background-image: url(./assets/vik/materials/m431.jpg);
+}
+.img.m432 {
+    background-image: url(./assets/vik/materials/m432.jpg);
+}
+.img.m433 {
+    background-image: url(./assets/vik/materials/m433.jpg);
+}
+.img.m434 {
+    background-image: url(./assets/vik/materials/m434.jpg);
+}
+.img.m435 {
+    background-image: url(./assets/vik/materials/m435.jpg);
+}
+
+.img.m441 {
+    background-image: url(./assets/vik/materials/m441.jpg);
+}
+.img.m442 {
+    background-image: url(./assets/vik/materials/m442.jpg);
+}
+.img.m443 {
+    background-image: url(./assets/vik/materials/m443.jpg);
+}
+.img.m444 {
+    background-image: url(./assets/vik/materials/m444.jpg);
+}
+.img.m445 {
+    background-image: url(./assets/vik/materials/m445.jpg);
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /r/
+
+Sitemap: https://vikplan.com/sitemap.xml

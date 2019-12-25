@@ -1,0 +1,34 @@
+// App specific styles
+
+html {
+    font-size: 14px;
+}
+
+#app {
+    display: flex;
+    margin-top: 60px;
+}
+
+#main-content {
+    width: 100%;
+}
+
+.table th, .table tr.is-center td, .table tr.is-center th, .table td.is-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th.is-img {
+    padding: 0;
+}
+
+a {
+    color: #3273dc;
+}
+
+.breadcrumb a {
+    color: #3273dc;
+}
+
+
+
