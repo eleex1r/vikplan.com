@@ -8,6 +8,7 @@ export const ENEMY_ATTACK = 4;
 export const ENEMY_DEFENSE = 5;
 export const ENEMY_HEALTH = 6;
 export const MARCH_SIZE = 7;
+export const MARCH_SPEED = 20;
 
 export const DAMAGE_VS_MELEE = 8;
 export const DAMAGE_VS_RANGED = 9;
@@ -17,6 +18,10 @@ export const DAMAGE_VS_SIEGE = 12;
 export const DAMAGE_VS_TIER_1 = 13;
 export const DAMAGE_VS_TIER_2 = 14;
 export const DAMAGE_VS_TIER_3 = 15;
+export const DAMAGE_VS_TIER_4 = 16;
+export const DAMAGE_VS_TIER_5 = 17;
+export const DAMAGE_VS_TIER_6 = 18;
+export const DAMAGE_VS_TIER_7 = 19;
 
 // troops
 export const MELEE = 1;
@@ -45,7 +50,7 @@ export const ACTION_ATTACK = 1;
 export const ACTION_DEFENSE = 2;
 
 // area
-export const AREA_POP = 1; // место силы
+export const AREA_POP = 1; // крепости
 
 /* template to tag research list
 war: {

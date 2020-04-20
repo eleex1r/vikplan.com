@@ -12,10 +12,6 @@ const tierBase = {
   7: 501
 };
 
-// _.forEach(db, tech => {
-//   tech.effect_values = tech.effect_values.split(',');
-// });
-
 export default {
   namespaced: true,
   state: {

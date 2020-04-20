@@ -157,14 +157,14 @@ export default {
 
                         totals.count += 1;
                         totals.inf += tech.inf;
-                        totals.food += tech.food;
-                        totals.lumber += tech.lumber;
-                        totals.iron += tech.iron;
-                        totals.stone += tech.stone;
-                        totals.silver += tech.silver;
+                        totals.food += tech.food || 0;
+                        totals.lumber += tech.lumber || 0;
+                        totals.iron += tech.iron || 0;
+                        totals.stone += tech.stone || 0;
+                        totals.silver += tech.silver || 0;
                         totals.gold += tech.gold;
                         totals.time += tech.time_days * 86400 + tech.time_seconds;
-                        totals.scroll += tech.scroll;
+                        totals.scroll += tech.scroll || 0;
                         if (totals.oracle < tech.oracle) {
                             totals.oracle = tech.oracle;
                         }
@@ -209,14 +209,14 @@ export default {
 
                         totals.count += 1;
                         totals.inf += tech.inf;
-                        totals.food += tech.food;
-                        totals.lumber += tech.lumber;
-                        totals.iron += tech.iron;
-                        totals.stone += tech.stone;
-                        totals.silver += tech.silver;
+                        totals.food += tech.food || 0;
+                        totals.lumber += tech.lumber || 0;
+                        totals.iron += tech.iron || 0;
+                        totals.stone += tech.stone || 0;
+                        totals.silver += tech.silver || 0;
                         totals.gold += tech.gold;
                         totals.time += tech.time_days * 86400 + tech.time_seconds;
-                        totals.scroll += tech.scroll;
+                        totals.scroll += tech.scroll || 0;
                         if (totals.oracle < tech.oracle) {
                             totals.oracle = tech.oracle;
                         }

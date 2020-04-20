@@ -268,7 +268,10 @@ export default {
         tier5: 'Тиры I-V',
         tier6: 'Тир VI',
         tier7: 'Тир VII',
-        shaman: 'Шаманы'
+        shaman: 'Шаманы',
+        secreto: 'Тайные - Нападение',
+        secretd: 'Тайные - Оборона',
+        secretf: 'Тайные - Крепости'
       },
       bonus: {
         id: 'default',

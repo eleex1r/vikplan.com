@@ -11,19 +11,19 @@
         &nbsp;
         {{ totals.inf | roundNumber }}
       </span>
-      <span class="tag" title="Еда">
+      <span class="tag" title="Еда" v-show="totals.food > 0">
         <span class="img img-food w20"></span>
         <span v-show="Math.abs(totals.food - totals.lumber) > 1000000">&nbsp;{{ totals.food | roundNumber }}</span>
       </span>
-      <span class="tag" title="Дерево">
+      <span class="tag" title="Дерево" v-show="totals.lumber > 0">
         <span class="img img-lumber w20"></span>
         <span v-show="Math.abs(totals.iron - totals.lumber) > 1000000">&nbsp;{{ totals.lumber | roundNumber }}</span>
       </span>
-      <span class="tag" title="Железо">
+      <span class="tag" title="Железо" v-show="totals.iron > 0">
         <span class="img img-iron w20"></span>
         <span v-show="Math.abs(totals.iron - totals.stone) > 1000000">&nbsp;{{ totals.iron | roundNumber }}</span>
       </span>
-      <span class="tag" title="Камень">
+      <span class="tag" title="Камень" v-show="totals.stone > 0">
         <span class="img img-stone w20"></span>
         &nbsp;
         {{ totals.stone | roundNumber }}
@@ -38,17 +38,16 @@
         &nbsp;
         {{ totals.gold | roundNumber }}
       </span>
-      <span class="tag" v-show="totals.scroll > 0" title="Манускрипты / Тотемы">
-        <!-- <span v-show="totals.type != 'tier6'" class="img img-scroll w20"></span>
-        <span v-show="totals.type == 'tier6'" class="img img-totem w20"></span> -->
+      <span class="tag" v-show="totals.scroll > 0" title="Манускрипты / Тотемы / Обсидиан / Осколки душ">
         <span class="img w20"
-          :class="{'img-scroll': totals.type != 'tier6' && totals.type != 'tier7',
+          :class="{'img-scroll': totals.type != 'tier6' && totals.type != 'tier7' && totals.type != 'secretf',
                     'img-totem': totals.type == 'tier6',
-                    'img-obsidian': totals.type == 'tier7'
+                    'img-obsidian': totals.type == 'tier7',
+                    'img-soulshard': totals.type == 'secretf'
                 }"
         ></span>
         &nbsp;
-        {{ totals.scroll | formatNumber }}
+        {{ totals.scroll | roundNumber }}
       </span>
       <span class="tag" v-show="totals.bronze > 0" title="Бронза">
         <span class="img img-bronze w20"></span>
@@ -56,9 +55,12 @@
         {{ totals.bronze | formatNumber }}
       </span>
       <span class="tag" v-show="totals.bronze2 > 0" title="Самородок">
-        <!-- <span class="img img-bronze w20"></span>&nbsp; -->
         Самородок&nbsp;
         {{ totals.bronze2 | formatNumber }}
+      </span>
+      <span class="tag" v-show="totals.shard > 0" title="Осколки душ">
+        Осколки душ&nbsp;
+        {{ totals.shard | formatNumber }}
       </span>
     </div>
 
@@ -84,24 +86,22 @@
       </div>
     </div>
 
-    <div class="control is-hidden-mobile" v-show="totals.scroll > 0" title="Манускрипты / Тотемы / Обсидиан">
+    <div class="control is-hidden-mobile" v-show="totals.scroll > 0" :title="totals.scroll + ' - Манускрипты / Тотемы / Обсидиан / Осколки душ'">
       <span class="tag">
-        <!-- <span v-show="totals.type != 'tier6'" class="img img-scroll w20"></span>
-                <span v-show="totals.type == 'tier6'" class="img img-totem w20"></span>
-        <span v-show="totals.type == 'tier7'" class="img img-totem w20"></span>-->
         <span
           class="img w20"
-          :class="{'img-scroll': totals.type != 'tier6' && totals.type != 'tier7',
+          :class="{'img-scroll': totals.type != 'tier6' && totals.type != 'tier7' && totals.type != 'secretf',
                     'img-totem': totals.type == 'tier6',
-                    'img-obsidian': totals.type == 'tier7'
+                    'img-obsidian': totals.type == 'tier7',
+                    'img-soulshard': totals.type == 'secretf'
                 }"
         ></span>
         &nbsp;
-        {{ totals.scroll | formatNumber }}
+        {{ totals.scroll | roundNumber }}
       </span>
     </div>
 
-    <span class="tag is-hidden-mobile" title="Золото">
+    <span class="tag is-hidden-mobile" :title="totals.gold + ' Золото'">
       <span class="img img-gold w20"></span>
       &nbsp;
       {{ totals.gold | roundNumber }}
