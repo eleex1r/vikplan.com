@@ -208,17 +208,19 @@ export default {
                         tech = db[techIndex[name + ' ' + level]];
 
                         totals.count += 1;
-                        totals.inf += tech.inf;
-                        totals.food += tech.food || 0;
-                        totals.lumber += tech.lumber || 0;
-                        totals.iron += tech.iron || 0;
-                        totals.stone += tech.stone || 0;
-                        totals.silver += tech.silver || 0;
-                        totals.gold += tech.gold;
-                        totals.time += tech.time_days * 86400 + tech.time_seconds;
-                        totals.scroll += tech.scroll || 0;
-                        if (totals.oracle < tech.oracle) {
-                            totals.oracle = tech.oracle;
+                        if (tech){
+                            totals.inf += tech.inf;
+                            totals.food += tech.food || 0;
+                            totals.lumber += tech.lumber || 0;
+                            totals.iron += tech.iron || 0;
+                            totals.stone += tech.stone || 0;
+                            totals.silver += tech.silver || 0;
+                            totals.gold += tech.gold;
+                            totals.time += tech.time_days * 86400 + tech.time_seconds;
+                            totals.scroll += tech.scroll || 0;
+                            if (totals.oracle < tech.oracle) {
+                                totals.oracle = tech.oracle;
+                            }
                         }
                         level -= 1;
                     }
@@ -288,7 +290,9 @@ export default {
                     name = names[slug];
                     tech = db[techIndex[name + ' ' + level]];
 
-                    totalInf += tech.inf;
+                    if (tech) {
+                        totalInf += tech.inf;
+                    }
                     level -= 1;
                 }
             });
