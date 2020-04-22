@@ -2,8 +2,8 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        &copy; 2018 - 2019 Vikings Planner. Нашли ошибку или есть вопрос?
-        <a href="https://vk.me/vikplan" target="_blank">Напишите</a>
+        &copy; 2018 - 2020 Vikings Planner. Нашли ошибку или есть вопрос?
+        <a href="https://github.com/ksuandi/vikplan.com/issues/new" target="_blank">Напишите</a>
       </p>
     </div>
   </footer>
