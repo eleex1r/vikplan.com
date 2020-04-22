@@ -111,15 +111,15 @@
 
     <table class="table is-bordered is-narrow is-fullwidth">
       <tr>
-        <th>Минус враж урону</th>
+        <th>Минус враж. урону</th>
         <td class="has-text-right">{{ bonus[4] }}%</td>
       </tr>
       <tr>
-        <th>Минус враж защите</th>
+        <th>Минус враж. защите</th>
         <td class="has-text-right">{{ bonus[5] }}%</td>
       </tr>
       <tr>
-        <th>Минус враж здоровью</th>
+        <th>Минус враж. здоровью</th>
         <td class="has-text-right">{{ bonus[6] }}%</td>
       </tr>
       <tr>
@@ -149,7 +149,7 @@
         <th>Урон осаде</th>
         <td class="has-text-right">{{ bonus[12] }}%</td>
       </tr>
-      <tr>
+      <!--<tr>
         <th>Урон I тиру</th>
         <td class="has-text-right">{{ tier == 7 ? bonus[13] : 0 }}%</td>
       </tr>
@@ -160,7 +160,7 @@
       <tr>
         <th>Урон III тиру</th>
         <td class="has-text-right">{{ tier == 7 ? bonus[15] : 0 }}%</td>
-      </tr>
+      </tr>-->
     </table>
 
   </div>

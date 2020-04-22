@@ -159,7 +159,9 @@ export default {
         tier5: 'Тиры I-V',
         tier6: 'Тир VI',
         tier7: 'Тир VII',
-        shaman: 'Шаманы'
+        secreto: 'Тайные - Нападение',
+        secretd: 'Тайные - Оборона',
+        secretf: 'Тайные - Крепости'
       },
       minLevel: 1
     };
@@ -193,6 +195,8 @@ export default {
         return 'Тотемы';
       } else if (this.researchType === 'tier7') {
         return 'Обсидиан';
+      } else if (this.researchType === 'secreto' || this.researchType === 'secretd' || this.researchType === 'secretf') {
+        return 'Осколки душ';
       } else {
         return 'Манускрипты'
       }

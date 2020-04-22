@@ -156,6 +156,21 @@ export default {
                 name: 'Шаманы',
                 img: 'research-shaman',
                 link: '/research/shaman'
+              },
+              {
+                name: 'Тайные - Нападение',
+                img: 'research-secreto',
+                link: '/research/secreto'
+              },
+              {
+                name: 'Тайные - Оборона',
+                img: 'research-secretd',
+                link: '/research/secretd'
+              },
+              {
+                name: 'Тайные - Крепости',
+                img: 'research-secretf',
+                link: '/research/secretf'
               }
             ]
           },

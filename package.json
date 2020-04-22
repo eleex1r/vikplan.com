@@ -1,32 +1,32 @@
 {
-  "name": "vikings_web2",
-  "version": "0.1.0",
+  "name": "vikplan.com",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "http": "http-server ./dist -p 8090"
+    "http": "http-server ./dist -p 8091"
   },
   "dependencies": {
-    "bulma": "^0.7.2",
-    "firebase": "^5.11.1",
+    "bulma": "^0.8.2",
+    "firebase": "^7.14.1",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.11",
-    "moment": "^2.22.2",
-    "vue": "^2.5.17",
-    "vue-meta": "^1.5.5",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vuex-persistedstate": "^2.5.4"
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "vue": "^2.6.11",
+    "vue-meta": "^2.3.3",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.2.0",
+    "vuex-persistedstate": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-service": "^3.1.4",
-    "http-server": "^0.11.1",
-    "node-sass": "^4.9.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "http-server": "^0.12.1",
+    "node-sass": "^4.13.1",
     "prerender-spa-plugin": "^3.4.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
     "plugins": {

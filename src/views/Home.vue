@@ -108,45 +108,65 @@
           </ul>
           <p>
             <router-link to="/research/warfare">
-              <!-- <img src="../assets/vik/research/warfare.png" width="20" alt="icon"> -->
               <span class="img research-warfare w20"></span>
               Знания - Военные
             </router-link>
           </p>
           <p>
             <router-link to="/research/invaders">
-              <!-- <img src="../assets/vik/research/invaders.png" width="20" alt="icon"> -->
               <span class="img research-invaders w20"></span>
               Знания - Захватчики
             </router-link>
           </p>
           <p>
             <router-link to="/research/hero">
-              <!-- <img src="../assets/vik/research/hero.png" width="20" alt="icon"> -->
               <span class="img research-hero w20"></span>
               Знания - Герой
             </router-link>
           </p>
           <p>
+            <router-link to="/research/tier5">
+              <span class="img research-tier5 w20"></span>
+              Знания - Тир 1-5
+            </router-link>
+          </p>
+          <p>
             <router-link to="/research/tier6">
-              <!-- <img src="../assets/vik/research/tier6.png" width="20" alt="icon"> -->
               <span class="img research-tier6 w20"></span>
               Знания - Тир 6
             </router-link>
           </p>
           <p>
             <router-link to="/research/tier7">
-              <!-- <img src="../assets/vik/research/tier6.png" width="20" alt="icon"> -->
               <span class="img research-tier7 w20"></span>
               Знания - Тир 7
-              <span class="tag is-success">Новое</span>
             </router-link>
           </p>
           <p>
             <router-link to="/research/shaman">
-              <!-- <img src="../assets/vik/research/shaman.png" width="20" alt="icon"> -->
               <span class="img research-shaman w20"></span>
               Знания - Шаманы
+            </router-link>
+          </p>
+          <p>
+            <router-link to="/research/secreto">
+              <span class="img research-secreto w20"></span>
+              Знания - Тайные - Нападение
+              <span class="tag is-success">Новое</span>
+            </router-link>
+          </p>
+          <p>
+            <router-link to="/research/secretd">
+              <span class="img research-secretd w20"></span>
+              Знания - Тайные - Оборона
+              <span class="tag is-success">Новое</span>
+            </router-link>
+          </p>
+          <p>
+            <router-link to="/research/secretf">
+              <span class="img research-secretf w20"></span>
+              Знания - Тайные - Крепости
+              <span class="tag is-success">Новое</span>
             </router-link>
           </p>
           <p>

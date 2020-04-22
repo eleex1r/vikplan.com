@@ -19,7 +19,8 @@ _.forEach(allTechs, (tech, index) => {
 
 _.forEach(db, (tech, index) => {
     const name = names[tech.slug];
-    techIndex[name + ' ' + tech.level] = index;
+    const slugType = tech.slug.split('_')[0];
+    techIndex[slugType + ' ' + name + ' ' + tech.level] = index;
 });
 
 export default {
@@ -153,18 +154,18 @@ export default {
                 if (slug.indexOf(researchType) === 0) {
                     while (level > 0) {
                         name = names[slug];
-                        tech = db[techIndex[name + ' ' + level]];
+                        tech = db[techIndex[researchType + ' ' + name + ' ' + level]];
 
                         totals.count += 1;
                         totals.inf += tech.inf;
-                        totals.food += tech.food;
-                        totals.lumber += tech.lumber;
-                        totals.iron += tech.iron;
-                        totals.stone += tech.stone;
-                        totals.silver += tech.silver;
+                        totals.food += tech.food || 0;
+                        totals.lumber += tech.lumber || 0;
+                        totals.iron += tech.iron || 0;
+                        totals.stone += tech.stone || 0;
+                        totals.silver += tech.silver || 0;
                         totals.gold += tech.gold;
                         totals.time += tech.time_days * 86400 + tech.time_seconds;
-                        totals.scroll += tech.scroll;
+                        totals.scroll += tech.scroll || 0;
                         if (totals.oracle < tech.oracle) {
                             totals.oracle = tech.oracle;
                         }
@@ -205,20 +206,22 @@ export default {
                     prevLevel = prevLayer[slug] || 0;
                     while (level > prevLevel) {
                         name = names[slug];
-                        tech = db[techIndex[name + ' ' + level]];
+                        tech = db[techIndex[researchType + ' ' + name + ' ' + level]];
 
                         totals.count += 1;
-                        totals.inf += tech.inf;
-                        totals.food += tech.food;
-                        totals.lumber += tech.lumber;
-                        totals.iron += tech.iron;
-                        totals.stone += tech.stone;
-                        totals.silver += tech.silver;
-                        totals.gold += tech.gold;
-                        totals.time += tech.time_days * 86400 + tech.time_seconds;
-                        totals.scroll += tech.scroll;
-                        if (totals.oracle < tech.oracle) {
-                            totals.oracle = tech.oracle;
+                        if (tech){
+                            totals.inf += tech.inf;
+                            totals.food += tech.food || 0;
+                            totals.lumber += tech.lumber || 0;
+                            totals.iron += tech.iron || 0;
+                            totals.stone += tech.stone || 0;
+                            totals.silver += tech.silver || 0;
+                            totals.gold += tech.gold;
+                            totals.time += tech.time_days * 86400 + tech.time_seconds;
+                            totals.scroll += tech.scroll || 0;
+                            if (totals.oracle < tech.oracle) {
+                                totals.oracle = tech.oracle;
+                            }
                         }
                         level -= 1;
                     }
@@ -282,13 +285,16 @@ export default {
             let layer = state[section],
                 totalInf = 0;
 
-            let tech, name;
+            let tech, name, slugType;
             _.forOwn(layer, (level, slug) => {
                 while (level > 0) {
                     name = names[slug];
-                    tech = db[techIndex[name + ' ' + level]];
+                    slugType = slug.split('_')[0];
+                    tech = db[techIndex[slugType + ' ' + name + ' ' + level]];
 
-                    totalInf += tech.inf;
+                    if (tech) {
+                        totalInf += tech.inf;
+                    }
                     level -= 1;
                 }
             });
@@ -325,7 +331,7 @@ export default {
             let techName = names[slug] + ' ' + lvl;
 
             while (techName) {
-                tech = db[techIndex[techName]];
+                tech = db[techIndex[researchType + ' ' + techName]];
                 name = names[tech.slug];
                 lvl = tech.level;
 
@@ -336,35 +342,35 @@ export default {
                 let t, dependencies = {};
                 while (lvl > 0) {
                     if (tech.req1) {
-                        t = db[techIndex[tech.req1]];
+                        t = db[techIndex[researchType + ' ' + tech.req1]];
                         if (!dependencies[t.slug] && (!current[t.slug] || current[t.slug] < t.level)) {
                             reqs.push(tech.req1);
                             dependencies[t.slug] = t.level;
                         }
                     }
                     if (tech.req2) {
-                        t = db[techIndex[tech.req2]];
+                        t = db[techIndex[researchType + ' ' + tech.req2]];
                         if (!dependencies[t.slug] && (!current[t.slug] || current[t.slug] < t.level)) {
                             reqs.push(tech.req2);
                             dependencies[t.slug] = t.level;
                         }
                     }
                     if (tech.req3) {
-                        t = db[techIndex[tech.req3]];
+                        t = db[techIndex[researchType + ' ' + tech.req3]];
                         if (!dependencies[t.slug] && (!current[t.slug] || current[t.slug] < t.level)) {
                             reqs.push(tech.req3);
                             dependencies[t.slug] = t.level;
                         }
                     }
                     if (tech.req4) {
-                        t = db[techIndex[tech.req4]];
+                        t = db[techIndex[researchType + ' ' + tech.req4]];
                         if (!dependencies[t.slug] && (!current[t.slug] || current[t.slug] < t.level)) {
                             reqs.push(tech.req4);
                             dependencies[t.slug] = t.level;
                         }
                     }
                     lvl -= 1;
-                    tech = db[techIndex[name + ' ' + lvl]];
+                    tech = db[techIndex[researchType + ' ' + name + ' ' + lvl]];
                 }
 
                 techName = reqs.pop();
