@@ -15,27 +15,6 @@
       <router-link to="/help/research">Помощь</router-link>
     </p>
     <div class="field is-grouped is-grouped-multiline">
-      <!-- <div class="field is-vertical">
-                <span class="label">Сэт:</span>
-                <div class="field has-addons">
-                    <p class="control">
-                        <span class="select">
-                            <select v-model="bonus.id" v-for="preset in bonusList">
-                                <option value="default">-- нет --</option>
-                                <option :value="preset.id">{{ preset.note }}</option>
-                            </select>
-                        </span>
-                    </p>
-                    <p class="control">
-                        <router-link class="button is-success" to="/research/sets/1">
-                            <span class="icon">
-                                <i class="fa fa-plus"></i>
-                            </span>
-                            <span>Новый</span>
-                        </router-link>
-                    </p>
-                </div>
-      </div>-->
       <div class="field is-vertical">
         <span class="label">База:</span>
         <p class="control">
@@ -47,10 +26,7 @@
         <p class="control">
           <span class="select">
             <select v-model.number="bonusSkin" aria-label="Скин">
-              <option>0</option>
-              <option>2</option>
-              <option>5</option>
-              <option>10</option>
+              <option v-for="n in [0,2,5,10]">{{n}}</option>
             </select>
           </span>
         </p>
@@ -60,11 +36,7 @@
         <p class="control">
           <span class="select">
             <select v-model.number="bonusEvent" aria-label="Бонус">
-              <option>0</option>
-              <option>10</option>
-              <option>20</option>
-              <option>30</option>
-              <option>40</option>
+              <option v-for="n in [0,10,20,30,40,50]">{{n}}</option>
             </select>
           </span>
         </p>
@@ -74,10 +46,7 @@
         <p class="control">
           <span class="select">
             <select v-model.number="bonusBoost" aria-label="Буст">
-              <option>0</option>
-              <option>20</option>
-              <option>30</option>
-              <option>35</option>
+              <option v-for="n in [0,20,30,35]">{{n}}</option>
             </select>
           </span>
         </p>
@@ -87,8 +56,7 @@
         <p class="control">
           <span class="select">
             <select v-model.number="bonusRepute" aria-label="Титул">
-              <option>0</option>
-              <option>25</option>
+              <option v-for="n in [0,25]">{{n}}</option>
             </select>
           </span>
         </p>
@@ -104,37 +72,7 @@
         <p class="control">
           <span class="select">
             <select v-model.number="bonusHands" aria-label="Помощь клана">
-              <option>0</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-              <option>17</option>
-              <option>18</option>
-              <option>19</option>
-              <option>20</option>
-              <option>21</option>
-              <option>22</option>
-              <option>23</option>
-              <option>24</option>
-              <option>25</option>
-              <option>26</option>
-              <option>27</option>
-              <option>28</option>
-              <option>29</option>
-              <option>30</option>
-              <option>31</option>
-              <option>32</option>
-              <option>33</option>
-              <option>34</option>
-              <option>35</option>
-              <option>36</option>
-              <option>37</option>
-              <option>38</option>
-              <option>39</option>
+              <option v-for="n in [0,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]">{{n}}</option>
             </select>
           </span>
         </p>
@@ -143,6 +81,16 @@
         <span class="label">Стоимость:</span>
         <p class="control">
           <input class="input" type="text" v-model.number.lazy="bonusCost" style="width:60px;" aria-label="Стоимость">
+        </p>
+      </div>
+      <div class="field is-vertical" v-if="researchType=='secreto'||researchType=='secretd'||researchType=='secretf'">
+        <span class="label">Уровень: <i class="fa fa-info-circle" title="применяется только к текущей ветке"></i></span>
+        <p class="control">
+          <span class="select">
+            <select v-model.number="bonusLevel" aria-label="Уровень">
+              <option v-for="n in [1,2,3]">{{n}}</option>
+            </select>
+          </span>
         </p>
       </div>
     </div>
@@ -250,6 +198,14 @@ function setComp(param) {
   };
 }
 
+function getCompL(researchType, param) {
+  return getComp(researchType+'_'+param)();
+}
+
+function setCompL(researchType, param, value) {
+  setComp(researchType+'_'+param)(value);
+}
+
 export default {
   components: {
     BaseLayout,
@@ -280,7 +236,8 @@ export default {
         event: 20,
         boost: 35,
         repute: 0,
-        cost: 13
+        cost: 13,
+        level: 1
       }
     };
   },
@@ -354,6 +311,10 @@ export default {
     bonusHands: {
       get: getComp('hands'),
       set: setComp('hands')
+    },
+    bonusLevel: {
+      get: function() { return getCompL(this.researchType, 'level'); },
+      set: function(value) { setCompL(this.researchType, 'level', value); }
     },
     bonusTotal() {
       return this.$store.getters['research/getCurrentBonusTotal'];

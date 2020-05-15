@@ -2,6 +2,7 @@ import Vue from 'vue'
 import _ from 'lodash'
 import db from './db/research'
 import allTechs from './db/research_list'
+import multipliers from './db/research_multi'
 
 let currentResearch = {},
     futureResearch = {},
@@ -34,7 +35,8 @@ export default {
             boost: 35,
             repute: 0,
             hands: 33,
-            cost: 20
+            cost: 20,
+            level: 1
         },
         bonusList: ['research1'],
         bonuses: {
@@ -109,7 +111,10 @@ export default {
             })
             return sum;
         },
-        applyBonus: (state) => (totals) => {
+        getMultiplier: (state) => (researchType, level, property) => {
+            return multipliers[researchType+'_'+level][property] || 1.0;
+        },
+        applyBonus: (state, getters) => (totals, researchType) => {
             const cur = state.currentBonus;
 
             if (cur.cost) {
@@ -127,7 +132,19 @@ export default {
                 * (1 - cur.repute/100)
                 / (1 + cur.base/100);
 
-            //totals.time_hands = totals.time_calc * (1 - cur.hands/100);
+            if (cur.level > 1) {
+            }
+    
+            if (cur[researchType+'_level'] > 1) {
+                const cur_level = cur[researchType + '_level']
+                //умножить правильно осколки, время, золото и могущество                
+                totals.time_calc *= getters.getMultiplier(researchType, cur_level, 'time_calc');
+                totals.scroll *= getters.getMultiplier(researchType, cur_level, 'scroll');
+                totals.gold *= getters.getMultiplier(researchType, cur_level, 'gold');
+                totals.inf *= getters.getMultiplier(researchType, cur_level, 'inf');
+                //TODO: сделать это динамически - всё имеющееся в multipliers влияет на totals
+            }
+
             totals.time_hands = (totals.time_calc * (1 - cur.hands/100) + totals.time_calc * (0.99 ** cur.hands)) / 2;
 
             return totals;
@@ -174,7 +191,7 @@ export default {
                 }
             });
 
-            return getters.applyBonus(totals);
+            return getters.applyBonus(totals, researchType);
         },
         getTotalsDiff: (state, getters) => (section, researchType) => {
             let layer = state[section],
@@ -228,7 +245,7 @@ export default {
                 }
             });
 
-            return getters.applyBonus(totals);
+            return getters.applyBonus(totals, researchType);
         },
         getBonusBase: (state, getters) => (id) => {
             const bonus = state.bonuses[id];
@@ -277,7 +294,8 @@ export default {
                     event: parseInt(bonus.event),
                     boost: parseInt(bonus.boost),
                     repute: parseInt(bonus.repute),
-                    cost: bonus.costHero + bonus.costShaman1 + bonus.costShaman2
+                    cost: bonus.costHero + bonus.costShaman1 + bonus.costShaman2,
+                    level: parseInt(bonus.level)
                 }
             });
         },
