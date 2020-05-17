@@ -199,7 +199,7 @@ function setComp(param) {
 }
 
 function getCompL(researchType, param) {
-  return getComp(researchType+'_'+param)();
+  return getComp(researchType+'_'+param)() || 1;
 }
 
 function setCompL(researchType, param, value) {
