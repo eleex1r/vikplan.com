@@ -3489,7 +3489,7 @@ export default [
 		"slug": "secreto_36",
 		"name": "Количество воинов в походе",
 		"max_level": 10,
-		"effect_values": "1,2,3,4,6,8,10,13,16,20",
+		"effect_values": "1,2,3,4,5,6,7,8,9,10",
 		war: {
 			effect: constants.MARCH_SIZE
 		}
@@ -3732,7 +3732,7 @@ export default [
 		"slug": "secretd_36",
 		"name": "Количество воинов в походе",
 		"max_level": 10,
-		"effect_values": "1,2,3,4,6,8,10,13,16,20",
+		"effect_values": "1,2,3,4,5,6,7,8,9,10",
 		war: {
 			effect: constants.MARCH_SIZE
 		}

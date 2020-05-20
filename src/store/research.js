@@ -36,7 +36,10 @@ export default {
             repute: 0,
             hands: 33,
             cost: 20,
-            level: 1
+            level: 1,
+            secreto_level: 1,
+            secretd_level: 1,
+            secretf_level: 1
         },
         bonusList: ['research1'],
         bonuses: {
