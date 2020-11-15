@@ -8,25 +8,25 @@
     "http": "http-server ./dist -p 8091"
   },
   "dependencies": {
-    "bulma": "^0.8.2",
-    "firebase": "^7.14.1",
+    "bulma": "^0.9.1",
+    "firebase": "^8.0.2",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.15",
-    "moment": "^2.24.0",
-    "vue": "^2.6.11",
-    "vue-meta": "^2.3.3",
-    "vue-router": "^3.1.6",
-    "vuex": "^3.2.0",
-    "vuex-persistedstate": "^3.0.1"
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "vue": "^2.6.12",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.4.9",
+    "vuex": "^3.5.1",
+    "vuex-persistedstate": "4.0.0-beta.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.3.1",
-    "@vue/cli-service": "^4.3.1",
-    "http-server": "^0.12.1",
-    "node-sass": "^4.13.1",
+    "@vue/cli-plugin-babel": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
+    "http-server": "^0.12.3",
+    "node-sass": "^5.0.0",
     "prerender-spa-plugin": "^3.4.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^10.1.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "postcss": {
     "plugins": {
